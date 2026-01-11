@@ -1,0 +1,31 @@
+
+  <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>NEXORA Editor</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.45.0/min/vs/loader.min.js"></script>
+</head>
+<body>
+
+<div id="editor" style="height:90vh;"></div>
+<button onclick="runCode()">Run</button>
+
+<script>
+require.config({ paths: { vs: 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.45.0/min/vs' }});
+require(["vs/editor/editor.main"], function () {
+  window.editor = monaco.editor.create(document.getElementById('editor'), {
+    value: "// Write your code here",
+    language: "javascript",
+    theme: "vs-dark"
+  });
+});
+
+function runCode(){
+  alert("Your code:\n" + window.editor.getValue());
+}
+</script>
+
+</body>
+</html>
