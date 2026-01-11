@@ -1,0 +1,45 @@
+body {
+  margin:0;
+  font-family: Arial, sans-serif;
+  background: url('../assets/background.jpg') center/cover fixed;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:white;
+  position:relative;
+}
+
+.overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.5);
+}
+
+.container{
+  position:relative;
+  text-align:center;
+  background:rgba(0,0,0,0.6);
+  padding:40px;
+  border-radius:15px;
+  box-shadow:0 0 30px cyan;
+}
+
+.logo{
+  width:120px;
+}
+
+h1{
+  font-size:32px;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 30px;
+  background:cyan;
+  color:black;
+  text-decoration:none;
+  border-radius:25px;
+  font-weight:bold;
+}
