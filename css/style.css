@@ -1,45 +1,77 @@
+/* ===== أساس الصفحة ===== */
 body {
-  margin:0;
-  font-family: Arial, sans-serif;
-  background: url('../assets/background.jpg') center/cover fixed;
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  color:white;
-  position:relative;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background: url('../assets/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  perspective: 1000px;
 }
 
-.overlay{
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,0.5);
+/* ===== صندوق المحتوى ===== */
+.container {
+  background: rgba(0,0,0,0.7);  /* شفافية */
+  padding: 50px 40px;
+  border-radius: 15px;
+  text-align: center;
+  width: 450px;  /* عشان الصفحة تبان كبيرة */
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
 }
 
-.container{
-  position:relative;
-  text-align:center;
-  background:rgba(0,0,0,0.6);
-  padding:40px;
-  border-radius:15px;
-  box-shadow:0 0 30px cyan;
+/* ===== العناوين ===== */
+h1 {
+  font-size: 2.5rem;   /* كبير وواضح */
+  margin-bottom: 30px;
+  color: #00f0ff;
 }
 
-.logo{
-  width:120px;
+/* ===== الحقول ===== */
+input {
+  width: 100%;
+  padding: 15px;
+  margin: 12px 0;
+  border-radius: 8px;
+  border: none;
+  font-size: 1.1rem;
 }
 
-h1{
-  font-size:32px;
+/* ===== الأزرار ===== */
+button {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  background: #00f0ff;
+  color: #000;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.btn{
-  display:inline-block;
-  margin-top:20px;
-  padding:12px 30px;
-  background:cyan;
-  color:black;
-  text-decoration:none;
-  border-radius:25px;
-  font-weight:bold;
+button:hover {
+  background: #00d4cc;
+  transform: translateY(-3px);
+}
+
+/* ===== الرسائل ===== */
+#msg {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #ff6961;
+}
+
+/* ===== تأثير دخول الصفحة ===== */
+body.loaded {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+body {
+  opacity: 0;
 }
